@@ -1,52 +1,57 @@
-* �T�v
+* 概要
 
-tumblr �� twitter �Ɏ��g�����e�����L����1�������A
-HTML �̃��X�g�`���ɏo�͂��܂��B
-
-
-
-* ���s��
-
-OS�͖₢�܂���B
-Ruby ��\�߃C���X�g�[���̏�A�����p�������B
+tumblr や twitter に自身が投稿した記事の1日分を、
+HTML のリスト形式に出力します。
 
 
 
-* �g����
+* 実行環境
 
-tumblr �� twitter �̃��O���A���ꂼ���API��p���Ď擾���A
-read.xml �� user_timeline.xml ���A�\�[�X�Ɠ����t�H���_�ɓ���܂��B
+OSは問いません。
+Ruby を予めインストールの上、ご利用下さい。
 
-��API��URL��
+
+
+* 使い方
+
+tumblr と twitter のログを、それぞれのAPIを用いて取得し、
+read.xml と user_timeline.xml を、ソースと同じフォルダに入れます。
+
+※APIのURL例
 http://(user_name).tumblr.com/api/read?num=50
 http://twitter.com/statuses/user_timeline.xml?count=200
 
-CUI ��ňȉ��̂悤�ɑł����݂܂��B
+tumblr のログは firefox 上でテキストを全て選択してコピーし、
+テキストエディタに貼り付けます。
+twitter のログは firefox 上で保存します。
+この時、ファイルの種類は「Webページ、完全」を選択します。
+
+CUI 上で以下のように打ち込みます。
 
 % ruby daylog.rb (year) (month) (day) > (output_file)
 
-����: 2009�N8��10���ɁAblog.txt �֏o�͂���
+※例: 2009年8月10日に、blog.txt へ出力する
 % ruby daylog.rb 2009 8 10 > blog.txt
 
-�o�͂��ꂽ�e�L�X�g���Ablog �ւ̓\��t�����ɂ����p�������B
-�Y�t�̃o�b�`�t�@�C���̂悤�Ȃ��̂�����Ă����ƁA�������y�ł��B
+出力されたテキストを、blog への貼り付け等にご利用下さい。
+添付のバッチファイルのようなものを作っておくと、扱いが楽です。
 
 
 
-* ����
+* 内訳
 
 ** tbtw.rb
-twitter �� tumblr �̃��X�g���܂Ƃ߂�
+twitter と tumblr のリストをまとめる
 
 ** tb2list.rb
-tumblr �̃��O�����X�g������
+tumblr のログをリスト化する
 
 ** tw2list.rb
-twitter �̃��O�����X�g������
+twitter のログをリスト化する
 
 
 
-* �X�V����
+* 更新履歴
 
 ** 2009-08-12
-���o
+初出
