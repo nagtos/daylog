@@ -1,0 +1,52 @@
+* 概要
+
+tumblr や twitter に自身が投稿した記事の1日分を、
+HTML のリスト形式に出力します。
+
+
+
+* 実行環境
+
+OSは問いません。
+Ruby を予めインストールの上、ご利用下さい。
+
+
+
+* 使い方
+
+tumblr と twitter のログを、それぞれのAPIを用いて取得し、
+read.xml と user_timeline.xml を、ソースと同じフォルダに入れます。
+
+※APIのURL例
+http://(user_name).tumblr.com/api/read?num=50
+http://twitter.com/statuses/user_timeline.xml?count=200
+
+CUI 上で以下のように打ち込みます。
+
+% ruby daylog.rb (year) (month) (day) > (output_file)
+
+※例: 2009年8月10日に、blog.txt へ出力する
+% ruby daylog.rb 2009 8 10 > blog.txt
+
+出力されたテキストを、blog への貼り付け等にご利用下さい。
+添付のバッチファイルのようなものを作っておくと、扱いが楽です。
+
+
+
+* 内訳
+
+** tbtw.rb
+twitter と tumblr のリストをまとめる
+
+** tb2list.rb
+tumblr のログをリスト化する
+
+** tw2list.rb
+twitter のログをリスト化する
+
+
+
+* 更新履歴
+
+** 2009-08-12
+初出
