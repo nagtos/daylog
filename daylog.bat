@@ -1,1 +1,2 @@
-ruby daylog.rb 2009 8 11 > blog.txt
+ruby daylog.rb 2009 8 12 > blog.txt
+pause

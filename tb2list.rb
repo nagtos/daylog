@@ -70,7 +70,7 @@ def tb_output_text(file_name, log_day)
         if tw_day - log_day < 60*60*24 &&
            tw_day - log_day >= 0
           tw_count += 1
-          tw_log[tw_count] =Array.new #æ‚É”z—ñ‚ğì‚Á‚Ä‚¨‚­
+          tw_log[tw_count] = Array.new #æ‚É”z—ñ‚ğì‚Á‚Ä‚¨‚­
           tw_flag = TRUE
         end
 
